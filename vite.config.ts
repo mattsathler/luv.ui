@@ -8,4 +8,14 @@ export default defineConfig({
     react(),
     babel({ presets: [reactCompilerPreset()] })
   ],
+  build: {
+    lib: {
+      entry: "src/lib/index.ts",
+      name: "LuvUI",
+      fileName: "luv-ui",
+    },
+    rollupOptions: {
+      external: ["react", "react-dom"],
+    },
+  }
 })

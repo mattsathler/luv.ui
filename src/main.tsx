@@ -1,10 +1,10 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import App from './App'
+import App from './docs/App'
 
-import './styles/_helpers.scss';
-import './styles/_reset.scss';
-import './components/components.scss';
+import './lib/styles/_helpers.scss';
+import './lib/styles/_reset.scss';
+import './lib/components/components.scss';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
