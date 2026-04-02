@@ -1,0 +1,15 @@
+@use './mixins/card' as *;
+
+.card {
+    @include card-base;
+}
+
+.card.flat {
+    @include card-flat;
+}
+
+@each $name, $value in colors.$color-keys {
+    .card.#{$name} {
+        @include card-variant($name);
+    }
+}
