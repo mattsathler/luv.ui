@@ -1,14 +1,15 @@
 {
   "name": "luv-ui",
   "private": false,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "build:lib": "vite build --mode lib",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "publish": "npm run build:lib && npm publish"
   },
   "dependencies": {
     "react": "^19.2.4",

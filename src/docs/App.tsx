@@ -1,3 +1,5 @@
+import { Tab } from "../lib/components/Tabs/Tab"
+import { Tabs } from "../lib/components/Tabs/Tabs"
 import logo from "./assets/logo.png"
 
 export default function App() {
@@ -14,7 +16,7 @@ export default function App() {
                         <h1 className="text-text">Buttons, Toggles & Variants</h1>
                         <div className="card outline d-flex flex-col gap">
                             <h2>Button</h2>
-                            <div className="d-flex flex-row gap items-center">
+                            <div className="d-flex flex-row gap items-center flex-wrap">
                                 <button className="primary">Primary</button>
                                 <button className="secondary">Secondary</button>
                                 <button className="outline">Outline</button>
@@ -25,7 +27,7 @@ export default function App() {
 
                         <div className="card outline d-flex flex-col gap">
                             <h2>Checkbox</h2>
-                            <div className="d-flex flex-row gap items-center">
+                            <div className="d-flex flex-row gap items-center flex-wrap">
                                 <input type="checkbox" className="checkbox primary" checked />
                                 <input type="checkbox" className="checkbox secondary" checked />
                                 <input type="checkbox" className="checkbox text" checked />
@@ -52,7 +54,7 @@ export default function App() {
                         <h1 className="text-text">Inputs, Selects & Pickers</h1>
                         <div className="card outline d-flex flex-col gap">
                             <h2>Input</h2>
-                            <div className="d-flex flex-row gap items-center">
+                            <div className="d-flex flex-row gap items-center flex-wrap">
                                 <input type="text" />
                                 <input type="date" />
                             </div>
@@ -80,6 +82,34 @@ export default function App() {
                                 <strong className="text-error">Error</strong>
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                <div className="dialog primary">
+                    <div className="d-flex flex-col gap">
+                        <h1 className="text-text">Tabs</h1>
+                        <Tabs>
+                            <Tab title="Tab 1">
+                                <div className="card outline">
+                                    Content for Tab 1
+                                </div>
+                            </Tab>
+                            <Tab title="Tab 2">
+                                <div className="card outline">
+                                    Content for Tab 2
+                                </div>
+                            </Tab>
+                            <Tab title="Tab 3">
+                                <div className="card outline">
+                                    Content for Tab 3
+                                </div>
+                            </Tab>
+                            <Tab title="Tab 4">
+                                <div className="card outline">
+                                    Content for Tab 4
+                                </div>
+                            </Tab>
+                        </Tabs>
                     </div>
                 </div>
             </div>

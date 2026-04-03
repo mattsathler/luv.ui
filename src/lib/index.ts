@@ -9,4 +9,6 @@ import './components/Input/Input.scss';
 import './components/Input/DatePicker.scss';
 import './components/Dialog/Dialog.scss';
 import './components/Card/Card.scss';
+import './components/Tabs/Tabs.tsx';
+import './components/Tabs/Tab.tsx';
 
