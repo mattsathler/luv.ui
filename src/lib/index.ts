@@ -12,3 +12,6 @@ import './components/Card/Card.scss';
 import './components/Tabs/Tabs.tsx';
 import './components/Tabs/Tab.tsx';
 
+// City
+
+import './city/Block/Block.tsx';

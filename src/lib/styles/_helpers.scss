@@ -456,6 +456,10 @@ $max-width-scale: (
     overflow-x: auto;
 }
 
+.scroll-auto {
+    overflow: auto;
+}
+
 .z-index-top {
     z-index: 9999;
 }
