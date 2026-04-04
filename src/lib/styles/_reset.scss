@@ -16,6 +16,7 @@ body {
     overflow-x: hidden;
     user-select: none;
     font-family: Nunito;
+    color: var-color(text);
 }
 
 html,
@@ -48,6 +49,7 @@ textarea {
     background: none;
     border: none;
     outline: none;
+    color: var-color(text);
 }
 
 a {
