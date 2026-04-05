@@ -1,20 +1,20 @@
 import React from "react";
 import "./IsoGrid.scss";
 import Block from "../Block/Block";
+import { TILE_TYPES, type TileType } from "../Block/models/TilesTypes";
 
-type TileData = {
+export type TileData = {
     x: number;
     y: number;
     z: number;
     color?: string;
+    type: TileType;
 };
 
 type IsoGridProps = {
     tiles: TileData[];
     tileSize?: number;
 };
-
-
 
 export const IsoGrid: React.FC<IsoGridProps> = ({
     tiles,
@@ -47,8 +47,9 @@ export const IsoGrid: React.FC<IsoGridProps> = ({
 
     const { width, height, offsetX, offsetY } = getIsoBounds(tiles, tileSize!);
 
+
     return (
-        <div className="iso-grid scroll h-full w-full">
+        <div className="iso-grid scroll-auto h-full w-full">
             <div
                 className="iso-inner"
                 style={{
@@ -60,9 +61,9 @@ export const IsoGrid: React.FC<IsoGridProps> = ({
                 }}
             >
                 {tiles.map((tile, i) => (
-                    <Block key={i} {...tile} size={tileSize} />
+                    <Block key={i} {...tile} size={tileSize} color={TILE_TYPES[tile.type]?.color}
+                        texture={TILE_TYPES[tile.type]?.texture} />
                 ))}
-
             </div>
         </div>
     );

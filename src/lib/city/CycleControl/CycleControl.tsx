@@ -6,19 +6,25 @@ export const DayCycleControl = () => {
     useEffect(() => {
         const root = document.documentElement;
 
-        // converte hora → ângulo
         const angle = (time / 24) * Math.PI * 2 - Math.PI;
 
-        // posição do sol
         const sunX = (Math.sin(angle) + 1) / 2;
-        const sunY = (Math.cos(angle) + 1) / 2;
+        const sunY = Math.max(0, Math.cos(angle)); // evita luz vindo de baixo
 
-        // intensidade (noite mais escuro)
-        const intensity = Math.max(0.1, sunY);
+        const intensity = Math.pow(sunY, 1.5); // curva mais natural
+
+        const sunset = 1 - sunY;
+
+        const r = 255;
+        const g = 220 - sunset * 120;
+        const b = 180 - sunset * 150;
+
+        const sunColor = `rgb(${r}, ${g}, ${b})`;
 
         root.style.setProperty("--sun-x", sunX.toString());
         root.style.setProperty("--sun-y", sunY.toString());
         root.style.setProperty("--sun-intensity", intensity.toString());
+        root.style.setProperty("--sun-color", sunColor);
 
     }, [time]);
 

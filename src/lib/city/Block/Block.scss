@@ -7,27 +7,46 @@
     .face {
         position: absolute;
         inset: 0;
+        background-image: var(--texture);
+        background-size: cover;
+        background-blend-mode: multiply;
     }
 
     .top {
-        background: color-mix(in srgb,
+        background:
+            var(--texture),
+            color-mix(in srgb,
                 var(--color),
-                white calc(30% * var(--sun-y) * var(--sun-intensity)));
-        ;
+                black calc(30% * (1 - var(--sun-y)) * var(--sun-intensity)));
+        background-size: cover;
+        background-blend-mode: multiply;
+
         clip-path: polygon(50% 0%, 100% 25%, 50% 50%, 0% 25%);
     }
 
     .left {
-        background: color-mix(in srgb,
+        background:
+            var(--texture),
+            color-mix(in srgb,
                 var(--color),
                 black calc(40% * (1 - var(--sun-x)) * var(--sun-intensity)));
+
+        background-size: cover;
+        background-blend-mode: multiply;
+
         clip-path: polygon(0% 25%, 50% 50%, 50% 100%, 0% 75%);
     }
 
     .right {
-        background: color-mix(in srgb,
+        background:
+            var(--texture),
+            color-mix(in srgb,
                 var(--color),
                 black calc(40% * var(--sun-x) * var(--sun-intensity)));
+
+        background-size: cover;
+        background-blend-mode: multiply;
+
         clip-path: polygon(50% 50%, 100% 25%, 100% 75%, 50% 100%);
     }
 }
