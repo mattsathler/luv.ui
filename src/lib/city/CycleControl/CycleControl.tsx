@@ -10,8 +10,7 @@ export const DayCycleControl = () => {
 
         const sunX = (Math.sin(angle) + 1) / 2;
         const sunY = Math.max(0, Math.cos(angle));
-        
-        const intensity = Math.pow(sunY, 1.5);
+
 
         const sunset = 1 - sunY;
 
@@ -23,7 +22,6 @@ export const DayCycleControl = () => {
 
         root.style.setProperty("--sun-x", sunX.toString());
         root.style.setProperty("--sun-y", sunY.toString());
-        root.style.setProperty("--sun-intensity", intensity.toString());
         root.style.setProperty("--sun-color", sunColor);
 
     }, [time]);

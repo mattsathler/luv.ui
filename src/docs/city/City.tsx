@@ -50,6 +50,7 @@ const tiles: TileData[] = [
 export default function City() {
     return (
         <div className="d-flex flex-col gap">
+            <DayCycleControl />
             <div className="dialog primary d-flex flex-col gap">
                 <div className="d-flex flex-col gap">
                     <h1 className="text-text">Grid & City Structure</h1>
@@ -86,7 +87,6 @@ export default function City() {
                         <Block color="#bb2566" key={4} size={124} texture="grass"></Block>
                         <Block color="#bbb823" key={5} size={124} texture="grass"></Block>
                     </div>
-                    <DayCycleControl />
                 </div>
             </div>
 
