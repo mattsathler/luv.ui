@@ -1,14 +1,44 @@
 import grass from "../textures/grass.png";
-import road from "../textures/road.png";
+import roadL from "../textures/road-l.png";
+import roadR from "../textures/road-r.png";
+import roadI from "../textures/road-i.png";
+import sand from '../textures/sand.png';
+import ocean from '../textures/ocean.png';
 
 export const TILE_TYPES = {
     grass: {
         color: "#ffffff00",
         texture: grass,
     },
-    road: {
+
+    'road': {
         color: "#ffffff00",
-        texture: road,
+        texture: roadR,
+    },
+
+    'road-r': {
+        color: "#ffffff00",
+        texture: roadR,
+    },
+
+    'road-l': {
+        color: "#ffffff00",
+        texture: roadL,
+    },
+
+    'road-i': {
+        color: "#ffffff00",
+        texture: roadI,
+    },
+
+    sand: {
+        color: "#ffffff00",
+        texture: sand,
+    },
+
+    ocean: {
+        color: "#ffffff00",
+        texture: ocean,
     }
 };
 
