@@ -17,7 +17,8 @@
             var(--texture),
             color-mix(in srgb,
                 var(--color),
-                black calc(40% * (1 - var(--sun-y)) * var(--sun-intensity)));
+                black calc(60% * ((1 - var(--sun-y)) + 0.3 * var(--sun-y))));
+
         background-size: cover;
         background-blend-mode: multiply;
 
@@ -25,12 +26,10 @@
     }
 
     .left {
-        background:
-            var(--texture),
+        background: var(--texture),
             color-mix(in srgb,
                 var(--color),
-                black calc(40% * (1 - var(--sun-x)) * var(--sun-intensity)));
-
+                black calc(60% * ((1 - var(--sun-y)) + (1 - var(--sun-x)) * var(--sun-y))));
         background-size: cover;
         background-blend-mode: multiply;
 
@@ -38,11 +37,10 @@
     }
 
     .right {
-        background:
-            var(--texture),
+        background: var(--texture),
             color-mix(in srgb,
                 var(--color),
-                black calc(40% * var(--sun-x) * var(--sun-intensity)));
+                black calc(60% * ((1 - var(--sun-y)) + var(--sun-x) * var(--sun-y))));
 
         background-size: cover;
         background-blend-mode: multiply;

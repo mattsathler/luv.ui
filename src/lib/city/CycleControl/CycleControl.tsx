@@ -9,9 +9,9 @@ export const DayCycleControl = () => {
         const angle = (time / 24) * Math.PI * 2 - Math.PI;
 
         const sunX = (Math.sin(angle) + 1) / 2;
-        const sunY = Math.max(0, Math.cos(angle)); // evita luz vindo de baixo
-
-        const intensity = Math.pow(sunY, 1.5); // curva mais natural
+        const sunY = Math.max(0, Math.cos(angle));
+        
+        const intensity = Math.pow(sunY, 1.5);
 
         const sunset = 1 - sunY;
 
