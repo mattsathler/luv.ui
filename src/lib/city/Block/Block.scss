@@ -1,13 +1,12 @@
 .tile {
     position: relative;
-    width: var(--size);
-    height: var(--size);
+    width: calc(var(--size) + 2px);
+    height: calc(var(--size) + 2px);
     transform: none;
 
     .face {
         position: absolute;
         inset: 0;
-        background-image: var(--texture);
         background-size: cover;
         background-blend-mode: multiply;
     }

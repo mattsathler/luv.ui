@@ -21,7 +21,6 @@ export function generateCity(size = 100): TileData[] {
                 type = "ocean";
             }
 
-            // 🏖️ PRAIA (transição)
             else if (
                 x <= oceanSize + beachSize || x > size - (oceanSize + beachSize) ||
                 y <= oceanSize + beachSize || y > size - (oceanSize + beachSize)
@@ -29,7 +28,6 @@ export function generateCity(size = 100): TileData[] {
                 type = "sand";
             }
 
-            // 🛣️ RUAS (grid urbano)
             else {
                 const isMainRoad =
                     x === Math.floor(size / 2) ||
@@ -84,7 +82,7 @@ function applyRoadDirection(tiles: TileData[]): TileData[] {
         }
 
         if (left) {
-            return { ...tile, type: "road-l" };
+            return { ...tile, type: "road-r" };
         }
 
         // fallback
