@@ -27,19 +27,23 @@ export const DayCycleControl = () => {
     }, [time]);
 
     return (
-        <>
-            <input
-                type="range"
-                min={0}
-                max={24}
-                step={0.1}
-                value={time}
-                onChange={(e) => setTime(Number(e.target.value))}
-            />
+        <div className="d-flex gap">
+            <div className="d-flex w-50-p">
 
-            <span>
-                Hora: {time.toFixed(1)}h
-            </span>
-        </>
+                <input
+                    type="range"
+                    min={0}
+                    max={24}
+                    step={0.1}
+                    value={time}
+                    onChange={(e) => setTime(Number(e.target.value))}
+                />
+            </div>
+            <div className="d-flex w-50-p">
+                <h2>
+                    Hora: {time.toFixed(1)}h
+                </h2>
+            </div>
+        </div>
     );
 };

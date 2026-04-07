@@ -10,7 +10,7 @@ type BlockProps = {
     isometric?: boolean;
 }
 
-export default function Block({ color = "#6aa84f", size = 32, x = 0, y = 0, z = 0, texture, isometric }: BlockProps) {
+export default function Block({ color = "transparent", size = 32, x = 0, y = 0, z = 0, texture, isometric }: BlockProps) {
     return (
         <div className="tile" style={{
             "--color": color,
