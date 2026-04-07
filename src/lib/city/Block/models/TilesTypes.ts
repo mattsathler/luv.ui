@@ -4,6 +4,8 @@ import roadR from "../textures/road-r.png";
 import roadI from "../textures/road-i.png";
 import sand from '../textures/sand.png';
 import ocean from '../textures/ocean.png';
+import autumn from '../textures/autumn.png';
+import snow from '../textures/snow.png';
 
 export const TILE_TYPES = {
     grass: {
@@ -39,6 +41,16 @@ export const TILE_TYPES = {
     ocean: {
         color: "#ffffff00",
         texture: ocean,
+    },
+
+    autumn: {
+        color: "#ffffff00",
+        texture: autumn,
+    },
+
+    snow: {
+        color: "#ffffff00",
+        texture: snow,
     }
 };
 
